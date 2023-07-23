@@ -25,4 +25,10 @@ var video = document.getElementById("bg-video");
 video.playbackRate = 0.8; // Set the desired playback rate (e.g., 0.5 for half speed)
 
 // To dynamically change the speed at a later point, you can use JavaScript to modify the playbackRate property
-video.playbackRate = 0.7; 
+video.playbackRate = 0.7;
+
+document.addEventListener("DOMContentLoaded", function() {
+  var video = document.getElementById('video-background');
+  video.muted = true;
+  video.play();
+});
