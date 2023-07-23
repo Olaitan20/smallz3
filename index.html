@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="video-background">
-        <video id="bg-video" autoplay loop muted>
+        <video id="bg-video" playsinline autoplay loop muted>
           <source src="./images/smallz 2nd export.mp4" type="video/mp4">
           <!-- Add additional video formats here -->
         </video>
@@ -21,9 +21,9 @@
     <div class="content">
       <nav id="navbar" class="text-white flex justify-between items-center px-10 md:px-20 py-4 ">
         <ul class="flex">
-          <li><a href="./mixtape.html" class="text-[12px] md:text-xl mr-[20px] uppercase tracking-wider hover:text-[#FF522D]">Mixtape </a></li>
-          <li><a href="./about.html" class="text-[12px] md:text-xl mr-[20px] uppercase tracking-wider hover:text-[#FF522D]">about </a></li>
-          <li><a href="" class="text-[12px] md:text-xl mr-[20px] uppercase tracking-wider hover:text-[#FF522D]">tour </a></li>
+          <li><a href="./mixtape.html" class="mr-[20px] uppercase tracking-wider hover:text-[#FF522D]">Mixtape </a></li>
+          <li><a href="./about.html" class=" mr-[20px] uppercase tracking-wider hover:text-[#FF522D]">about </a></li>
+          <li><a href="" class=" mr-[20px] uppercase tracking-wider hover:text-[#FF522D]">tour </a></li>
         </ul>
         <ul class="flex hidden md:block md:flex">
           <li><a href=""><img src="./images/spotify-fill.svg" class="mr-[2em]" alt=""></a></li>
@@ -49,17 +49,17 @@
 
         <!-- pop up form -->
       <div id="Popup">
-          <div id="modal" class="p-[1em] md:p-[5em]">
-            <form id="myForm">
+          <div id="modal">
+            <form id="myForm" class="py-[3em] px-6 md:p-[5em]">
               <!--form fields-->
               
-              <h1 class="text-white uppercase md:font-medium mb-6 text-[20px] md:text-4xl">Join the mailing list</h1>
-              <div class="mb-4 w-full">
+              <h1 class="  text-white uppercase md:font-medium mb-6 text-[20px] md:text-4xl">Join the mailing list</h1>
+              <div class="mb-4 w-full  ">
                 <input class="  border border-white bg-transparent  w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                     id="name" type="name" placeholder="name">
               </div>
-              <div class="mb-4 w-full">
-                <input class="  border border-white bg-transparent  w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+              <div class="mb-4 w-full ">
+                <input class="border border-white bg-transparent  w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                     id="email" type="email" placeholder="email address">
               </div>
               <div class="flex items-center justify-between">
