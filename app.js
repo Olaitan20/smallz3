@@ -1,22 +1,42 @@
-const alertButton = document.getElementById('alertButton');
-const Popup = document.getElementById('Popup');
-const myForm = document.getElementById('myForm');
-const successMessage = document.getElementById('successMessage');
+const alertButton = document.getElementById("alertButton");
+const Popup = document.getElementById("Popup");
+const myForm = document.getElementById("myForm");
+const successMessage = document.getElementById("successMessage");
 
-alertButton.addEventListener('click', function() {
-  Popup.style.display = 'block';
+alertButton.addEventListener("click", function () {
+  Popup.style.display = "block";
 });
 
-myForm.addEventListener('submit', function(event) {
+myForm.addEventListener("submit", async function (event) {
   event.preventDefault();
-  successMessage.style.display = 'block';
-  myForm.reset();
+
+  try {
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+
+    const response = await fetch("http://localhost:3000/rsvp", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email }),
+    });
+
+    const data = await response.json();
+    console.log(data);
+    successMessage.style.display = "block";
+    myForm.reset();
+  } catch (err) {
+    console.log(err);
+  }
+
 });
 
-Popup.addEventListener('click', function(event) {
+Popup.addEventListener("click", function (event) {
   if (event.target === Popup) {
-    Popup.style.display = 'none';
-    successMessage.style.display = 'none';
+    Popup.style.display = "none";
+    successMessage.style.display = "none";
   }
 });
 var video = document.getElementById("bg-video");
@@ -27,8 +47,8 @@ video.playbackRate = 0.8; // Set the desired playback rate (e.g., 0.5 for half s
 // To dynamically change the speed at a later point, you can use JavaScript to modify the playbackRate property
 video.playbackRate = 0.7;
 
-document.addEventListener("DOMContentLoaded", function() {
-  var video = document.getElementById('video-background');
+document.addEventListener("DOMContentLoaded", function () {
+  var video = document.getElementById("video-background");
   video.muted = true;
   video.play();
 });
