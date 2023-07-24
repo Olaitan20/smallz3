@@ -15,7 +15,7 @@ myForm.addEventListener("submit", async function (event) {
     const name = form.name.value;
     const email = form.email.value;
 
-    const response = await fetch("http://localhost:3000/rsvp", {
+    const response = await fetch("https://long-puce-crane-yoke.cyclic.app/rsvp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
