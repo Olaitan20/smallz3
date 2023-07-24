@@ -30,7 +30,10 @@ myForm.addEventListener("submit", async function (event) {
 
     const data = await response.json();
     console.log(data);
-    successMessage.style.display = "block";
+    if (successMessage) {
+      successMessage.style.display = "block";
+
+    }
     myForm.reset();
   } catch (err) {
     console.log(err);
