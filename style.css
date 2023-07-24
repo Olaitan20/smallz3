@@ -105,6 +105,7 @@ input:focus {
     display: none;
     text-align: center;
     margin-top: 10px;
+    color: #fff;
   }
 #slide {
     display: flex;
