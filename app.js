@@ -3,9 +3,14 @@ const Popup = document.getElementById("Popup");
 const myForm = document.getElementById("myForm");
 const successMessage = document.getElementById("successMessage");
 
+
 alertButton.addEventListener("click", function () {
   Popup.style.display = "block";
 });
+
+function closeMenuBar() {
+  document.getElementById("Popup").style.display = "none";
+}
 
 myForm.addEventListener("submit", async function (event) {
   event.preventDefault();

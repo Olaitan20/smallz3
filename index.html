@@ -22,9 +22,9 @@
       <nav id="navbar" class="text-white flex justify-between items-center px-10 md:px-20 py-4 ">
         <ul class="flex">
           <li><a href="./index.html" target="_self" class="text-[16px] mr-[20px] font-medium uppercase tracking-wider text-[#FF522D]">Home </a></li>
-          <li><a href="./mixtape.html" target="_self" class="text-[16px] mr-[20px] font-medium uppercase tracking-wider hover:text-[#FF522D]">Mixtape </a></li>
+          <li><a href="./mixtape.html" target="_self" class="text-[16px] mr-[20px] font-medium uppercase tracking-wider hover:text-[#FF522D]">Mixtapes </a></li>
           <li><a href="./about.html" class=" text-[16px] mr-[20px] font-medium uppercase tracking-wider hover:text-[#FF522D]">about </a></li>
-          <li><a href="" class="text-[16px] mr-[20px] font-medium uppercase tracking-wider hover:text-[#FF522D]">tour </a></li>
+          <li><a href="" class="text-[16px] mr-[20px] font-medium uppercase tracking-wider hover:text-[#FF522D]">Book </a></li>
         </ul>
         <ul class="flex hidden md:block md:flex">
           <li><a href="https://open.spotify.com/user/0a58ebtzb1bc56d28awfuvyp7?si=JYR4hqs3S_-xCyRqCZViIw" target="_blank"><img src="./images/spotify-fill.svg" class="mr-[2em]" alt=""></a></li>
@@ -53,11 +53,12 @@
       <div id="Popup">
           <div id="modal" class="flex flex-col lg:flex-row items-center">
             <div>
+              <img src="./images/close-circle-fill.svg" alt="" class="absolute top-1 right-2 md:hidden" id="close" onclick="closeMenuBar()">
               <img src="./images/SWS PARTY POSTER ALT (1).jpg" alt="" class="w-full">
             </div>
             <form id="myForm" class=" px-4 md:pl-[2em] md:pr-[5em]">
               <!--form fields-->
-              <h1 class="absolute right-2">&#xEB97;</h1>
+              <img src="./images/close-circle-fill.svg" alt="" class="absolute right-2 hidden md:block" id="close" onclick="closeMenuBar()">
               <input type="text" id="name" name="name" required placeholder="name" class="my-8 border border-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent py-2 pr-20 pl-2 placeholder:italic">
               <input type="email" id="email" name="email" required placeholder="email address"  class="mb-8 border border-white text-white leading-tight focus:outline-none focus:shadow-outline bg-transparent py-2 pr-20 placeholder:italic pl-2  ">
               <div class="flex items-center justify-between mb-8">
