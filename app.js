@@ -15,12 +15,17 @@ function closeMenuBar() {
 myForm.addEventListener("submit", async function (event) {
   event.preventDefault();
 
+  alert("Registration is closed.");
+  return;
+
   try {
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
 
-    const response = await fetch("https://long-puce-crane-yoke.cyclic.app/rsvp", {
+    const url = "https://long-puce-crane-yoke.cyclic.app/rsvp";
+    // const url = "http://localhost:3000/rsvp";
+    const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
